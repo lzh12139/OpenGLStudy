@@ -47,7 +47,10 @@ public:
                     string s;stream>>s;
                     int cur=0;
                     for(auto i:s)
-                        if(i=='/')x[j][cur++]--;
+                        if(i=='/'){
+                            x[j][cur++]--;
+                            if(cur==2)break;
+                        }
                         else x[j][cur]=x[j][cur]*10+i-'0';
                     x[j][cur]--;
                 }
