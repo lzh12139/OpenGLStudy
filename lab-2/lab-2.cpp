@@ -62,13 +62,15 @@ void draw(GLFWwindow* window){
 			for(int k=3;k<6;k++)
 				//if(rand()&1)vertices[24*i+8*j+k]=color[k-3];
 				//else 
-				vertices[24*i+8*j+k]=color[k];
-			/*vertices[24*i+8*j+6]=
+				vertices[24*i+8*j+k]=
+					mymodel.vnSets[mymodel.fSets[i][j][2]][k-3]*0.5+0.5;
+
+			vertices[24*i+8*j+6]=
 				(mymodel.vtSets[mymodel.fSets[i][j][1]][0]-l.first)/nextx;
 			vertices[24*i+8*j+7]=
-				(mymodel.vtSets[mymodel.fSets[i][j][1]][1]-l.second)/nexty;*/
-			for(int k=6;k<7;k++)
-				vertices[24*i+8*j+k]=mymodel.vtSets[mymodel.fSets[i][j][1]][k-6];
+				(mymodel.vtSets[mymodel.fSets[i][j][1]][1]-l.second)/nexty;
+			/*for(int k=6;k<7;k++)
+				vertices[24*i+8*j+k]=mymodel.vtSets[mymodel.fSets[i][j][1]][k-6];*/
 		}
 	}
 
